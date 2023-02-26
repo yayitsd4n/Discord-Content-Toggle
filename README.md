@@ -1,9 +1,7 @@
 # ![Discord Content Toggle Logo](./readme-files/icon32.png) Discord Content Toggle
-
+**An extension for Discord that allows you to hide and show content in messages.**
 
 ![Demo](./readme-files/demo.gif)
-
-**An extension for Discord that allows you to hide and show content in messages.**
 
 
 - Drop-down arrows are shown above content that can be hidden; similar to Slack.
