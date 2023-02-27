@@ -7,6 +7,7 @@ An extension for Discord that allows you to hide and show content in messages.
 - Drop-down arrows are shown above content that can be hidden; similar to Slack.
 - Hide images, animates gifs, videos, emojis, and embedded link content.
 - Hidden content persists between page and application loads.
+- Support for dark and light themes
 - Works on the Web and Desktop apps.
 
 ---
