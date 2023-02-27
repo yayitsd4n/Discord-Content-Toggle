@@ -111,7 +111,10 @@ class ElectronRemoteDebugger(object):
 
         cmd = "%s %s" % (path, "--remote-debugging-port=%d" % port)
         print (cmd)
-        p = subprocess.Popen(cmd, shell=True)
+        if sys.platform == 'win32':
+            p = subprocess.Popen(cmd, shell=True, creationflags=subprocess.CREATE_NEW_CONSOLE)
+        else:
+            p = subprocess.Popen(cmd, shell=True)
         time.sleep(0.5)
         if p.poll() is not None:
             raise Exception("Could not execute cmd (not found or already running?): %r"%cmd)

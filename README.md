@@ -39,15 +39,28 @@ Python 3 is prerequisite for using this script. The script will be injected into
 
 
 #### Windows
-- Python is available on the [Microsoft Store](https://apps.microsoft.com/store/detail/python-310/9PJPW5LDXLZ5) or through the [Python website](https://www.python.org/downloads/)
+- Python is available on the [Microsoft Store](https://apps.microsoft.com/store/detail/python-310/9PJPW5LDXLZ5) or through the [Python website](https://docs.python.org/3/using/windows.html)
 - Download and extract the lastest [release](https://github.com/yayitsd4n/Discord-Content-Toggle/releases) for the *desktop-app* anywhere on your machine
-- Open a cmd prompt, navigate to the folder you extracted, and type: `python discord-content-toggle.py`
+- Open a cmd prompt, navigate to the folder you extracted, and type: 
+    - `python pip install -r requirements.txt`
+    - `python discord-content-toggle.py`
+
+##### Notes
+- To launch again in the future, you only need to type:
+`python discord-content-toggle.py`
+- Consider making a .bat file that you can double click to run `python discord-content-toggle.py`
 
 Discord will open with this script injected. The cmd prompt is safe to close if it didn't automatically.
 
 #### Mac
-- Current versions of Mac OS ship with Python preinstalled with the name space of `python3`. If Python is not installed for some reason, head [here](https://www.python.org/downloads/) and download the latest version for your machine.
+- If Python is not installed, the install instructions are [here](https://docs.python.org/3/using/mac.html).
 - Download and extract the lastest [release](https://github.com/yayitsd4n/Discord-Content-Toggle/releases) for the *desktop-app* anywhere on your machine
-- Open a terminal, navigate to the folder you extracted, and type: `python3 discord-content-toggle.py`
+- Open a terminal, navigate to the folder you extracted, and type:
+    - `python pip install -r requirements.txt`
+    - `python discord-content-toggle.py`
+
+##### Notes
+- To launch again in the future, you only need to type:
+`python discord-content-toggle.py`
 
 Discord will open with this script injected. The terminal is safe to close if it didn't automatically.

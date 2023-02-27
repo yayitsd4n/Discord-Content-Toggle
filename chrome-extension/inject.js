@@ -17,27 +17,67 @@ const styles = `
         display: flex;
     }
     .embedProvider {
+        display: flex;
+        height: 20px;
         font-family: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: .75rem;
         line-height: 1.375rem;
         color: var(--text-normal);
     }
+    .accordion-hidden .embedProvider {
+        width: 100%;
+        background: var(--background-secondary);
+        border-radius: 4px;
+    }
 
     .js-btn-accordion {
-        width: 16px;
-        margin-left: 4px;
-        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgOCA2IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNNCA2TDAuNTM1ODk5IDAuNzQ5OTk5TDcuNDY0MSAwLjc1TDQgNloiIGZpbGw9IiNEOUQ5RDkiLz4KPC9zdmc+Cg==");
-        background-repeat: no-repeat;
-        background-position: center center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 5px;
         border-radius: 4px;
         cursor: pointer;
     }
-    .js-btn-accordion:hover {
-        background-color: #232428;
-        
+    .js-btn-accordion::before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px 4px 0 4px;
+        border-color: var(--interactive-normal) transparent transparent transparent;
+        cursor: pointer;
     }
-    .accordion-hidden .js-btn-accordion {
-        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSI3IiB2aWV3Qm94PSIwIDAgNiA3IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNNS41IDMuNUwwLjI1IDYuOTY0MUwwLjI1IDAuMDM1ODk4NUw1LjUgMy41WiIgZmlsbD0iI0Q5RDlEOSIvPgo8L3N2Zz4K");
+    .js-btn-accordion:hover {
+        background-color: var(--background-modifier-hover);
+    }
+    .js-btn-accordion:hover::before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px 4px 0 4px;
+        border-color: var(--interactive-hover) transparent transparent transparent;
+        cursor: pointer;
+    }
+
+
+    .accordion-hidden .js-btn-accordion::before {
+        content: "";
+        display: block;
+        height: 0;
+        border-style: solid;
+        border-width: 4px 0 4px 6px;
+        border-color: transparent transparent transparent var(--interactive-normal);
+    }
+    .accordion-hidden .js-btn-accordion:hover::before {
+        content: "";
+        display: block;
+        height: 0;
+        border-style: solid;
+        border-width: 4px 0 4px 6px;
+        border-color: transparent transparent transparent var(--interactive-hover);
     }
 
     [id*="message-accessories-"].accordion-hidden { 
@@ -283,8 +323,8 @@ function addAccordions(hidableContent) {
         /*
             * embedProvider is auto populated from links where Discord is able to
             identify some kind of source
-            * If there is no embedProvider, we'll make our own with a string of 'Attachments'
-                * In the future, maybe add support with more descriptive names:
+            * If there is no embedProvider, we'll just show the accordion button
+                * In the future, maybe add support with a descriptive name:
                     * GIF
                     * Image
                     * URL
@@ -296,7 +336,7 @@ function addAccordions(hidableContent) {
         } else {
             const embedProviderElem = document.createElement('div');
             embedProviderElem.classList.add('embedProvider');
-            embedProviderElem.innerHTML = 'Acessories<div class="js-btn-accordion"></div>';
+            embedProviderElem.innerHTML = '<div class="js-btn-accordion"></div>';
 
             accessoryElem.prepend(embedProviderElem);
         }

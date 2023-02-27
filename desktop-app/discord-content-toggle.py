@@ -14,6 +14,4 @@ elif platform.system() == 'Windows':
 def load_file(file_name: str) -> str:
     return os.path.join(os.path.dirname(__file__), file_name)
 
-
-
 inject(appDirectory, scripts=[load_file("script.js")]);
