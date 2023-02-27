@@ -45,12 +45,12 @@ Python 3 is prerequisite for using this script. The script will be injected into
     - `python pip install -r requirements.txt`
     - `python discord-content-toggle.py`
 
+Discord will open with this script injected. The cmd prompt is safe to close if it didn't automatically.
+
 ##### Notes
 - To launch again in the future, you only need to type:
 `python discord-content-toggle.py`
 - Consider making a .bat file that you can double click to run `python discord-content-toggle.py`
-
-Discord will open with this script injected. The cmd prompt is safe to close if it didn't automatically.
 
 #### Mac
 - If Python is not installed, the install instructions are [here](https://docs.python.org/3/using/mac.html).
@@ -59,8 +59,8 @@ Discord will open with this script injected. The cmd prompt is safe to close if 
     - `python pip install -r requirements.txt`
     - `python discord-content-toggle.py`
 
+Discord will open with this script injected. The terminal is safe to close if it didn't automatically.
+
 ##### Notes
 - To launch again in the future, you only need to type:
 `python discord-content-toggle.py`
-
-Discord will open with this script injected. The terminal is safe to close if it didn't automatically.
