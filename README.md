@@ -33,9 +33,10 @@ Chrome will add the extenstion and automitically enable it. Make sure to refresh
 #### User Script
 If you have a user script extension such as [Violent Monkey](https://violentmonkey.github.io/), [Tamper Monkey](https://www.tampermonkey.net/), or [Grease Monkey](https://www.greasespot.net/), this script is hosted [here](https://greasyfork.org/en/scripts/460729-discord-content-toggle) on greasyfork.org
 
+---
+
 ### Desktop App Installation
 Python 3 is prerequisite for using this script. The script will be injected into the desktop app with help from the [electron-inject](https://github.com/tintinweb/electron-inject) package.
-
 
 
 #### Windows
