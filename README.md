@@ -48,7 +48,7 @@ Discord will open with this script injected. The cmd prompt is safe to close if 
 
 #### Mac
 - If Python is not already installed, the install instructions are [here](https://docs.python.org/3/using/mac.html).
-- Download and extract the lastest [release](https://github.com/yayitsd4n/Discord-Content-Toggle/releases) for the *desktop-app* anywhere on your Mac
+- Download and extract the lastest [release](https://github.com/yayitsd4n/Discord-Content-Toggle/releases) for the *discord-content-toggle* anywhere on your Mac
 - Open a terminal, navigate to the folder you extracted, and type:
     - `python -m pip install -r requirements.txt`
     - `python discord-content-toggle.py`
