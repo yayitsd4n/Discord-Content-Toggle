@@ -18,7 +18,7 @@ The Desktop app needs a local installation of Python while the web app has a cou
  
 
 ### Discord.com
-If you want to hide content on the Discord Web app, this script is available as a browser extenstion on:
+If you want to hide content on the Discord web app, this script is available as a browser extenstion on:
 * [Chrome](https://chrome.google.com/webstore/detail/discord-content-toggle/nkhklilhgiobpmblfbcoffdmflpfokdn)
 * [Firefox](https://addons.mozilla.org/en-US/firefox/addon/discord-content-toggle/)
 
@@ -34,7 +34,7 @@ Unfortunately, the desktop installation isn't as seamless as it is on the web. A
 
 #### Windows
 - Python is available on the [Microsoft Store](https://apps.microsoft.com/store/detail/python-310/9PJPW5LDXLZ5) or through the [Python website](https://docs.python.org/3/using/windows.html)
-- Download and extract the lastest [release](https://github.com/yayitsd4n/Discord-Content-Toggle/releases) for the *desktop-app* anywhere on your PC
+- Download and extract the lastest [release](https://github.com/yayitsd4n/Discord-Content-Toggle/releases) for the *discord-content-toggle* anywhere on your PC
 - Open a cmd prompt, navigate to the folder you extracted, and type: 
     - `python -m pip install -r requirements.txt`
     - `python discord-content-toggle.py`
