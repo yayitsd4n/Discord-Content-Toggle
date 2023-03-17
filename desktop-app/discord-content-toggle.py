@@ -16,6 +16,8 @@ elif platform.system() == 'Windows':
     discordDir = f"{os.getenv('LOCALAPPDATA')}/Discord/"
     appFolder = sorted(filter(filterAppFolder, os.listdir(os.getenv('LOCALAPPDATA') + "/Discord/")))[-1]
     appDirectory = f"{discordDir}/{appFolder}/Discord.exe"
+elif platform.system() == 'Linux':
+    appDirectory = '/usr/bin/Discord'
 
 
 
