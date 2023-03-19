@@ -55,6 +55,35 @@ Discord will open with this script injected. The cmd prompt is safe to close if 
 
 Discord will open with this script injected. The terminal is safe to close if it didn't automatically.
 
+#### Linux
+
+Note: Assumes the Discord application is installed in `/usr/bin/Discord`
+
+- Install Python if it's not already installed
+- Download and extract the lastest [release](https://github.com/yayitsd4n/Discord-Content-Toggle/releases) for the *discord-content-toggle* anywhere on your computer
+- Open a terminal, navigate to the folder you extracted, and type:
+    - `python -m pip install -r requirements.txt`
+    - `python discord-content-toggle.py`
+
+##### Fedora
+To make the extension seemless, create a local application launcher which will override the system launcher
+
+```sh
+cat > ~/.local/share/applications/discord.desktop <<EOL
+[Desktop Entry]
+Name=Discord
+StartupWMClass=discord
+Comment=All-in-one voice and text chat for gamers that's free, secure, and works on both your desktop and phone.
+GenericName=Internet Messenger
+Exec=python /opt/discord-ext/desktop-app/discord-content-toggle.py
+Icon=discord
+Type=Application
+Categories=Network;InstantMessaging;
+Path=/usr/bin
+X-Desktop-File-Install-Version=0.26
+EOL
+```
+
 ##### Notes
 - To launch again in the future, you only need to type:
 `python discord-content-toggle.py`
